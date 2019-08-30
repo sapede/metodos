@@ -6,6 +6,8 @@ from zero_funcao import gravar #Metodos para gravar a função
 
 from interpolacao import lagrange, polinomio_newton, spline, trigonometrica
 
+from coef_correlacao import pearson, spearman, kendall
+
 
 
 
@@ -19,8 +21,6 @@ def hello():
 Funções esperadas são todas da biblioteca Math do python, portanto digite-as conforme a documentação da biblioteca
 
 '''
-
-
 
 '''
 Exemplo de input esperado:
@@ -75,7 +75,6 @@ Exemplo de input esperado:
 	"fl(x)": "2*x"
 }
 '''
-
 @app.route('/newton_raphson', methods=['POST'])
 def newton_raphson_exe():
 	x = request.json['x']
@@ -97,7 +96,6 @@ Exemplo de input esperado:
 	"f(x)": "x**3 - 2" 
 }
 '''
-
 @app.route('/secante', methods=['POST'])
 def secante_exe():
 	x0 = request.json['x0']
@@ -140,13 +138,6 @@ def polinomio_newton_exe():
 	return polinomio_newton(x,y)
 
 
-@app.route('/teste', methods=['POST'])
-def teste():
-	x = request.json['x']
-	y = request.json['y']
-
-	return str(type(x))
-
 '''
 Exemplo de input esperado:
 {
@@ -160,6 +151,7 @@ def spline_exe():
 	y = request.json['y']
 
 	return spline(x,y)
+
 
 
 '''
@@ -178,8 +170,51 @@ def trigonometrica_exe():
 
 
 
+'''
+Exemplo de input esperado:
+{
+	"x": "1,2,3,4,5,6", 
+	"y": "2,4,6,8,10,12",
+}
+'''
+@app.route('/pearson', methods=['POST'])
+def pearson_exe():
+	x = request.json['x']
+	y = request.json['y']
+
+	return pearson(x,y)
 
 
+
+'''
+Exemplo de input esperado:
+{
+	"x": "1,2,3,4,5,6", 
+	"y": "2,4,6,8,10,12",
+}
+'''
+@app.route('/spearman', methods=['POST'])
+def spearman_exe():
+	x = request.json['x']
+	y = request.json['y']
+
+	return spearman(x,y)
+
+
+
+'''
+Exemplo de input esperado:
+{
+	"x": "1,2,3,4,5,6", 
+	"y": "2,4,6,8,10,12",
+}
+'''
+@app.route('/kendall', methods=['POST'])
+def kendall_exe():
+	x = request.json['x']
+	y = request.json['y']
+
+	return kendall(x,y)
 
 
 if __name__ == '__main__':
