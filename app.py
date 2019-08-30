@@ -112,7 +112,7 @@ def secante_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/lagrange', methods=['POST'])
@@ -127,7 +127,7 @@ def lagrange_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/polinomio_newton', methods=['POST'])
@@ -142,7 +142,7 @@ def polinomio_newton_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/spline', methods=['POST'])
@@ -158,7 +158,7 @@ def spline_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/trigonometrica', methods=['POST'])
@@ -174,7 +174,7 @@ def trigonometrica_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/pearson', methods=['POST'])
@@ -190,7 +190,7 @@ def pearson_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/spearman', methods=['POST'])
@@ -206,7 +206,7 @@ def spearman_exe():
 Exemplo de input esperado:
 {
 	"x": "1,2,3,4,5,6", 
-	"y": "2,4,6,8,10,12",
+	"y": "2,4,6,8,10,12"
 }
 '''
 @app.route('/kendall', methods=['POST'])
